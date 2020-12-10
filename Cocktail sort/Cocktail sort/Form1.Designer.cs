@@ -45,7 +45,7 @@
             // 
             // txtNum
             // 
-            this.txtNum.Location = new System.Drawing.Point(97, 73);
+            this.txtNum.Location = new System.Drawing.Point(97, 53);
             this.txtNum.Name = "txtNum";
             this.txtNum.Size = new System.Drawing.Size(100, 22);
             this.txtNum.TabIndex = 0;
@@ -53,26 +53,29 @@
             // lblNumeros
             // 
             this.lblNumeros.AutoSize = true;
-            this.lblNumeros.Location = new System.Drawing.Point(13, 77);
+            this.lblNumeros.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNumeros.Location = new System.Drawing.Point(12, 53);
             this.lblNumeros.Name = "lblNumeros";
-            this.lblNumeros.Size = new System.Drawing.Size(62, 17);
+            this.lblNumeros.Size = new System.Drawing.Size(77, 17);
             this.lblNumeros.TabIndex = 1;
-            this.lblNumeros.Text = "Numero:";
+            this.lblNumeros.Text = "Numeros:";
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Location = new System.Drawing.Point(111, 13);
+            this.lblTitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(92, 9);
             this.lblTitulo.Name = "lblTitulo";
-            this.lblTitulo.Size = new System.Drawing.Size(46, 17);
+            this.lblTitulo.Size = new System.Drawing.Size(436, 29);
             this.lblTitulo.TabIndex = 2;
-            this.lblTitulo.Text = "label2";
+            this.lblTitulo.Text = "Ordenamiento Burbuja Bidireccional";
             // 
             // btnGenerar
             // 
-            this.btnGenerar.Location = new System.Drawing.Point(97, 132);
+            this.btnGenerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGenerar.Location = new System.Drawing.Point(92, 102);
             this.btnGenerar.Name = "btnGenerar";
-            this.btnGenerar.Size = new System.Drawing.Size(75, 23);
+            this.btnGenerar.Size = new System.Drawing.Size(118, 36);
             this.btnGenerar.TabIndex = 3;
             this.btnGenerar.Text = "Generar";
             this.btnGenerar.UseVisualStyleBackColor = true;
@@ -80,9 +83,10 @@
             // 
             // btnOrdenar
             // 
-            this.btnOrdenar.Location = new System.Drawing.Point(97, 197);
+            this.btnOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnOrdenar.Location = new System.Drawing.Point(92, 158);
             this.btnOrdenar.Name = "btnOrdenar";
-            this.btnOrdenar.Size = new System.Drawing.Size(75, 23);
+            this.btnOrdenar.Size = new System.Drawing.Size(118, 36);
             this.btnOrdenar.TabIndex = 4;
             this.btnOrdenar.Text = "Ordenar";
             this.btnOrdenar.UseVisualStyleBackColor = true;
@@ -92,29 +96,31 @@
             // 
             this.lbNum.FormattingEnabled = true;
             this.lbNum.ItemHeight = 16;
-            this.lbNum.Location = new System.Drawing.Point(328, 87);
+            this.lbNum.Location = new System.Drawing.Point(256, 53);
             this.lbNum.Name = "lbNum";
-            this.lbNum.Size = new System.Drawing.Size(120, 132);
+            this.lbNum.Size = new System.Drawing.Size(131, 196);
             this.lbNum.TabIndex = 6;
             // 
             // lbOrdenar
             // 
             this.lbOrdenar.FormattingEnabled = true;
             this.lbOrdenar.ItemHeight = 16;
-            this.lbOrdenar.Location = new System.Drawing.Point(496, 88);
+            this.lbOrdenar.Location = new System.Drawing.Point(420, 53);
             this.lbOrdenar.Name = "lbOrdenar";
-            this.lbOrdenar.Size = new System.Drawing.Size(120, 132);
+            this.lbOrdenar.Size = new System.Drawing.Size(133, 196);
             this.lbOrdenar.TabIndex = 8;
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.lblO);
             this.groupBox1.Controls.Add(this.lblG);
             this.groupBox1.Controls.Add(this.lblTiempoOrdenar);
             this.groupBox1.Controls.Add(this.lblTiempoGenerar);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(43, 278);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(282, 102);
+            this.groupBox1.Size = new System.Drawing.Size(310, 102);
             this.groupBox1.TabIndex = 9;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tiempo de ejecucion";
@@ -122,36 +128,40 @@
             // lblTiempoGenerar
             // 
             this.lblTiempoGenerar.AutoSize = true;
-            this.lblTiempoGenerar.Location = new System.Drawing.Point(130, 35);
+            this.lblTiempoGenerar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTiempoGenerar.Location = new System.Drawing.Point(147, 35);
             this.lblTiempoGenerar.Name = "lblTiempoGenerar";
-            this.lblTiempoGenerar.Size = new System.Drawing.Size(28, 17);
+            this.lblTiempoGenerar.Size = new System.Drawing.Size(28, 18);
             this.lblTiempoGenerar.TabIndex = 0;
             this.lblTiempoGenerar.Text = "0:0";
             // 
             // lblTiempoOrdenar
             // 
             this.lblTiempoOrdenar.AutoSize = true;
-            this.lblTiempoOrdenar.Location = new System.Drawing.Point(94, 69);
+            this.lblTiempoOrdenar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTiempoOrdenar.Location = new System.Drawing.Point(103, 69);
             this.lblTiempoOrdenar.Name = "lblTiempoOrdenar";
-            this.lblTiempoOrdenar.Size = new System.Drawing.Size(28, 17);
+            this.lblTiempoOrdenar.Size = new System.Drawing.Size(28, 18);
             this.lblTiempoOrdenar.TabIndex = 1;
             this.lblTiempoOrdenar.Text = "0:0";
             // 
             // lblG
             // 
             this.lblG.AutoSize = true;
+            this.lblG.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblG.Location = new System.Drawing.Point(20, 35);
             this.lblG.Name = "lblG";
-            this.lblG.Size = new System.Drawing.Size(104, 17);
+            this.lblG.Size = new System.Drawing.Size(107, 18);
             this.lblG.TabIndex = 10;
             this.lblG.Text = "Generar datos:";
             // 
             // lblO
             // 
             this.lblO.AutoSize = true;
+            this.lblO.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblO.Location = new System.Drawing.Point(23, 69);
             this.lblO.Name = "lblO";
-            this.lblO.Size = new System.Drawing.Size(65, 17);
+            this.lblO.Size = new System.Drawing.Size(66, 18);
             this.lblO.TabIndex = 11;
             this.lblO.Text = "Ordenar:";
             // 
@@ -159,7 +169,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(595, 403);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lbOrdenar);
             this.Controls.Add(this.lbNum);

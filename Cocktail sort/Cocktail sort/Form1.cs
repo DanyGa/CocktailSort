@@ -78,8 +78,8 @@ namespace Cocktail_sort
                 }
                 izq = ultimo;
 
-                lblComparaciones.Text = comparaciones.ToString();
-                lblIntercambios.Text = intercambio.ToString();
+                lblComparaciones.Text = comparaciones.ToString() + " Comparaciones";
+                lblIntercambios.Text = intercambio.ToString() + " Intercambios";
                 return;
 
             } while (izq < der);          
@@ -104,6 +104,7 @@ namespace Cocktail_sort
                 max = int.Parse(txtMax.Text);
                 GenerarDatos(n, min, max);
                 mostrar(n, lbNum);
+                btnGenerar.Enabled = false;
                 btnOrdenar.Enabled = true;
             }
             catch
@@ -119,6 +120,7 @@ namespace Cocktail_sort
             contador.Stop();
             lblTiempoOrdenar.Text = contador.Elapsed.TotalMilliseconds.ToString() + " Milisegundos";           
             mostrar(n, lbOrdenar);
+            btnGenerar.Enabled = true;
             btnOrdenar.Enabled = false;
 
         }

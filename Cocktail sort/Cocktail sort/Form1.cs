@@ -18,42 +18,71 @@ namespace Cocktail_sort
             InitializeComponent();
         }
 
-        int[] vector = new int[30];
+        int[] vector;
         int n;
+        int min;
+        int max;
         int i;
         Stopwatch contador = new Stopwatch();
 
-        public void GenerarDatos(int n)
+        public void GenerarDatos(int n, int min, int max)
         {
+            vector = new int[n];
             Random aleatorio = new Random();
-            for (i = 0; i < n; i++)
+            for (i = 0; i < vector.Length; i++)
             {
-                vector[i] = aleatorio.Next(1, 31);
+                vector[i] = aleatorio.Next(min, max);
 
             }
         }
 
         public void BurbujaBidireccional (int n)
         {
-            int recorrido;
-            int aux = 0;
-            n = vector.Length;
-            //ordena los numeros de mayor a menor
-            for (recorrido = 0; recorrido < n ; recorrido++)
-            //si en el paso anterior no hubo cambios se detiene el ciclo
+
+            int der = vector.Length - 1;
+            int izq = 0;
+            int ultimo = 0;
+            int aux;
+            int comparaciones = 0;
+            int intercambio = 0;
+            do
             {
-                for (int j = 0; j < n - recorrido - 1; j++)
-                //las comparaciones van disminuyendo a medida que se afectan los pasos
+                //recorrido a la derecha
+                for (int i = izq; i < der; i++)
                 {
-                    if (vector[j] < vector[j + 1])
-                    {                       
-                        aux = vector[j];
-                        vector[j] = vector[j + 1];
-                        vector[j + 1] = aux;
+                    comparaciones++;
+                    if (vector[i] > vector[i+1])
+                    {
+                        aux = vector[i];
+                        vector[i] = vector[i + 1];
+                        vector[i + 1] = aux;
+                        ultimo = i;
+                        intercambio++;
                     }
                 }
+                der = ultimo;
 
-            }
+                //recorrido a la izq
+                for (int j = der; j > izq; j--)
+                {
+                    comparaciones++;
+                    if (vector[j-1] > vector[j])
+                    {
+                        aux = vector[j];
+                        vector[j] = vector[j - 1];
+                        vector[j - 1] = aux;
+                        ultimo = j;
+                        intercambio++;
+                    }
+                    
+                }
+                izq = ultimo;
+
+                lblComparaciones.Text = comparaciones.ToString();
+                lblIntercambios.Text = intercambio.ToString();
+                return;
+
+            } while (izq < der);          
         }
 
         public void mostrar(int n, ListBox l)
@@ -71,10 +100,9 @@ namespace Cocktail_sort
                 lbNum.Items.Clear();
                 lbOrdenar.Items.Clear();
                 n = int.Parse(txtNum.Text);
-                contador.Restart();
-                GenerarDatos(n);
-                contador.Stop();
-                lblTiempoGenerar.Text = contador.Elapsed.TotalMilliseconds.ToString() + " Milisegundos";
+                min = int.Parse(txtMin.Text);
+                max = int.Parse(txtMax.Text);
+                GenerarDatos(n, min, max);
                 mostrar(n, lbNum);
                 btnOrdenar.Enabled = true;
             }
@@ -89,7 +117,7 @@ namespace Cocktail_sort
             contador.Restart();
             BurbujaBidireccional(n);
             contador.Stop();
-            lblTiempoOrdenar.Text = contador.Elapsed.TotalMilliseconds.ToString() + " Milisegundos";
+            lblTiempoOrdenar.Text = contador.Elapsed.TotalMilliseconds.ToString() + " Milisegundos";           
             mostrar(n, lbOrdenar);
             btnOrdenar.Enabled = false;
 

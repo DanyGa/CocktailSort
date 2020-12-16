@@ -139,9 +139,9 @@
             this.lblComparaciones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblComparaciones.Location = new System.Drawing.Point(145, 63);
             this.lblComparaciones.Name = "lblComparaciones";
-            this.lblComparaciones.Size = new System.Drawing.Size(28, 18);
+            this.lblComparaciones.Size = new System.Drawing.Size(16, 18);
             this.lblComparaciones.TabIndex = 13;
-            this.lblComparaciones.Text = "0:0";
+            this.lblComparaciones.Text = "0";
             // 
             // lblC
             // 
@@ -189,9 +189,9 @@
             this.lblIntercambios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblIntercambios.Location = new System.Drawing.Point(147, 35);
             this.lblIntercambios.Name = "lblIntercambios";
-            this.lblIntercambios.Size = new System.Drawing.Size(28, 18);
+            this.lblIntercambios.Size = new System.Drawing.Size(16, 18);
             this.lblIntercambios.TabIndex = 0;
-            this.lblIntercambios.Text = "0:0";
+            this.lblIntercambios.Text = "0";
             // 
             // label1
             // 

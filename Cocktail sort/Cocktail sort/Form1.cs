@@ -77,17 +77,17 @@ namespace Cocktail_sort
                     
                 }
                 izq = ultimo;
+                
+            } while (izq < der);  
 
-                lblComparaciones.Text = comparaciones.ToString() + " Comparaciones";
-                lblIntercambios.Text = intercambio.ToString() + " Intercambios";
-                return;
-
-            } while (izq < der);          
+            lblComparaciones.Text = comparaciones.ToString() + " Comparaciones";
+            lblIntercambios.Text = intercambio.ToString() + " Intercambios";
+            return;        
         }
 
-        public void mostrar(int n, ListBox l)
+        public void mostrar(ListBox l)
         {
-            for(i = 0; i < n; i++)
+            for(i = 0; i < vector.Length; i++)
             {
                 l.Items.Add(vector[i]);
             }
@@ -103,7 +103,7 @@ namespace Cocktail_sort
                 min = int.Parse(txtMin.Text);
                 max = int.Parse(txtMax.Text);
                 GenerarDatos(n, min, max);
-                mostrar(n, lbNum);
+                mostrar(lbNum);
                 btnGenerar.Enabled = false;
                 btnOrdenar.Enabled = true;
             }
@@ -119,7 +119,7 @@ namespace Cocktail_sort
             BurbujaBidireccional(n);
             contador.Stop();
             lblTiempoOrdenar.Text = contador.Elapsed.TotalMilliseconds.ToString() + " Milisegundos";           
-            mostrar(n, lbOrdenar);
+            mostrar(lbOrdenar);
             btnGenerar.Enabled = true;
             btnOrdenar.Enabled = false;
 
